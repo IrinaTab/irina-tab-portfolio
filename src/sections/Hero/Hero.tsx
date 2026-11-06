@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Sparkles } from 'lucide-react'
 import Container from '@/components/Container'
 import Button from '@/components/Button'
+import heroPhoto from '@/assets/my-photo.jpg'
 import './Hero.css'
 
 export default function Hero() {
@@ -35,7 +36,7 @@ export default function Hero() {
 
           <div className="hero__media">
             <div className="hero__photo-wrapper">
-              <img src="/src/assets/my-photo.jpg" alt="Ирина Табия" className="hero__photo-img" />              <div className="hero__photo-badge">
+              <img src={heroPhoto} alt="Ирина Табия" className="hero__photo-img" />              <div className="hero__photo-badge">
                 <div>
                   <div className="hero__photo-badge-title">Frontend Developer</div>
                   <div className="hero__photo-badge-sub">React • TypeScript • UI/UX</div>
