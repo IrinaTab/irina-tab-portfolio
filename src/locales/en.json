@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "hero": {
+    "title": "Irina Tabiya",
+    "subtitle": "Web Development, Freelance",
+    "description": "I create modern, fast, and responsive websites. Combining an analytical mindset (economics degree) with clean code.",
+    "btn_contact": "Contact Me",
+    "btn_projects": "My Works",
+    "photo_placeholder": "Photo"
+  },
+  "about": {
+    "title": "About Me",
+    "education_title": "Education",
+    "experience_title": "Experience",
+    "education": [
+      {
+        "period": "Higher Education",
+        "institution": "PSTU",
+        "specialty": "Economics",
+        "description": "Analytical mindset, structured problem-solving, data processing, and business understanding."
+      },
+      {
+        "period": "Web Development Course",
+        "institution": "Skypro",
+        "specialty": "Web Developer",
+        "description": "Mastery of the modern frontend stack: HTML, CSS, JavaScript, TypeScript, React, application architecture, and Git workflow."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2023 — Present",
+        "role": "Frontend Developer (Freelance)",
+        "description": "Building modern responsive websites, translating Figma designs into code, developing React/TS web apps with clean and maintainable code."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "My tools and technologies"
+  },
+  "projects": {
+    "title": "My Works",
+    "subtitle": "Selected projects I have worked on"
+  },
+  "contacts": {
+    "title": "Contact Me",
+    "subtitle": "Open for new projects and opportunities",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
+  }
+}

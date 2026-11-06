@@ -1,0 +1,22 @@
+.footer {
+    border-top: 1px solid rgba(26, 26, 26, 0.06);
+    padding: var(--space-lg) 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__social a {
+    margin-left: var(--space-sm);
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.footer__social a:hover {
+    color: var(--text-main);
+}

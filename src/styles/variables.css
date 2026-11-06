@@ -1,0 +1,25 @@
+:root {
+  /* Colors (minimalism, black & beige palette) */
+  --bg-main: #FAFAFA;
+  --bg-secondary: #F0EBE1;
+  --text-main: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --accent: #E5C3A6;
+
+  /* Typography */
+  --font-main: 'Manrope', sans-serif;
+  --font-heading: 'Unbounded', sans-serif;
+
+  /* Spacing */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+
+  /* Breakpoints */
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  --bp-large: 1280px;
+}
+
