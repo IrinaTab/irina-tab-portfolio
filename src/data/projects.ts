@@ -1,31 +1,31 @@
+import jardinFirst from '@/assets/jardin-first.jpg'
+import jardinMain from '@/assets/jardin-main.jpg'
+import jardinMobile from '@/assets/jardin-mobile.jpg'
+import jardinAbout from '@/assets/jardin-about.jpg'
+import jardinDetails from '@/assets/jardin-details.jpg'
+
 export interface ProjectItem {
   id: string
-  title: string
-  description: string
   stack: string[]
-  image: string
+  images: string[]
+  liveLink?: string
+  videoUrl?: string
+  role?: string
 }
 
 export const projects: ProjectItem[] = [
   {
-    id: 'furniture',
-    title: 'Мебельный каталог',
-    description: 'Одностраничный каталог мебели с фильтрами и анимациями.',
-    stack: ['React', 'TypeScript', 'Vite', 'CSS'],
-    image: '',
-  },
-  {
-    id: 'mini-games',
-    title: 'Мини-игры',
-    description: 'Набор небольших браузерных игр на Canvas.',
-    stack: ['React', 'JavaScript', 'HTML5', 'CSS'],
-    image: '',
-  },
-  {
-    id: 'audit',
-    title: 'Аудит бухгалтерского учёта',
-    description: 'Внутренний инструмент проверки бухгалтерских записей.',
-    stack: ['React', 'TypeScript', 'Vite', 'Tailwind'],
-    image: '',
+    id: 'jardin',
+    stack: ['React', 'TypeScript', 'Vite', 'i18n (RU/EN/ES)', 'CSS Modules'],
+    images: [
+      jardinFirst,
+      jardinMain,
+      jardinMobile,
+      jardinAbout,
+      jardinDetails
+    ],
+    liveLink: 'https://www.jardinhairs.com/',
+    videoUrl: '/videos/jardin-review.mp4',
+    role: 'Frontend Developer'
   },
 ]

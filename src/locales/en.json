@@ -43,15 +43,31 @@
     "title": "Skills",
     "subtitle": "My tools and technologies"
   },
-  "projects": {
-    "title": "My Works",
-    "subtitle": "Selected projects I have worked on"
-  },
   "contacts": {
     "title": "Contact Me",
     "subtitle": "Open for new projects and opportunities",
     "telegram": "Telegram",
     "whatsapp": "WhatsApp",
     "email": "Email"
+  },
+  "projects": {
+    "title": "My Works",
+    "subtitle": "Selected projects I have worked on",
+    "view_photos": "View all photos",
+    "no_photo": "No photo",
+    "view_site": "View site",
+    "view_video": "Review",
+    "video_not_supported": "Your browser does not support video.",
+    "jardin": {
+      "title": "Jardin — Hair Atelier",
+      "description": "Premium website for an atelier of exclusive wigs and hairpieces made from natural Slavic hair.",
+      "longDescription": "Developing a brand website from scratch. The goal was to convey the atmosphere of luxury, handcraft, and the highest quality. Implemented a complex design in golden-black tones, an interactive product calculator, an adaptive gallery, and smooth animations.",
+      "features": [
+        "Multilingual (RU / EN / ES)",
+        "Interactive parameter calculator",
+        "Premium animation and typography",
+        "Fully responsive on all devices"
+      ]
+    }
   }
 }
