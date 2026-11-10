@@ -19,14 +19,20 @@ export default function Projects() {
 
   const closeLightbox = () => setLightbox(null)
 
-  const nextImage = (imagesLength: number) => {
+  // Убрали аргумент imagesLength
+  const nextImage = () => {
     if (!lightbox) return
-    setLightbox({ ...lightbox, index: (lightbox.index + 1) % imagesLength })
+    const project = projects.find(p => p.id === lightbox.projectId)
+    if (project && lightbox.index < project.images.length - 1) {
+      setLightbox({ ...lightbox, index: lightbox.index + 1 })
+    }
   }
 
-  const prevImage = (imagesLength: number) => {
+  const prevImage = () => {
     if (!lightbox) return
-    setLightbox({ ...lightbox, index: (lightbox.index - 1 + imagesLength) % imagesLength })
+    if (lightbox.index > 0) {
+      setLightbox({ ...lightbox, index: lightbox.index - 1 })
+    }
   }
 
   const activeProject = lightbox ? projects.find(p => p.id === lightbox.projectId) : null
@@ -118,8 +124,8 @@ export default function Projects() {
           images={activeProject.images}
           currentIndex={lightbox.index}
           onClose={closeLightbox}
-          onNext={() => nextImage(activeProject.images.length)}
-          onPrev={() => prevImage(activeProject.images.length)}
+          onNext={nextImage}
+          onPrev={prevImage}
         />
       )}
 

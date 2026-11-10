@@ -109,6 +109,12 @@
     right: 4%;
 }
 
+.lightbox__nav--disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 @media (max-width: 768px) {
     .lightbox__nav {
         width: 48px;

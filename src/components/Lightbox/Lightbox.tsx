@@ -11,22 +11,25 @@ interface LightboxProps {
 }
 
 export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev }: LightboxProps) {
-    // Закрытие по нажатию на Escape и управление стрелками
+    // Проверяем, можно ли листать дальше/назад
+    const isFirst = currentIndex === 0
+    const isLast = currentIndex === images.length - 1
+
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === 'Escape') onClose()
-            if (e.key === 'ArrowRight') onNext()
-            if (e.key === 'ArrowLeft') onPrev()
+            // Блокируем клавиши, если достигли края
+            if (e.key === 'ArrowRight' && !isLast) onNext()
+            if (e.key === 'ArrowLeft' && !isFirst) onPrev()
         }
         window.addEventListener('keydown', handleKeyDown)
-        // Блокируем скролл фона
         document.body.style.overflow = 'hidden'
 
         return () => {
             window.removeEventListener('keydown', handleKeyDown)
             document.body.style.overflow = 'auto'
         }
-    }, [onClose, onNext, onPrev])
+    }, [onClose, onNext, onPrev, isFirst, isLast])
 
     return (
         <div className="lightbox" onClick={onClose}>
@@ -34,9 +37,11 @@ export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev
                 <X size={32} />
             </button>
 
+            {/* Левая стрелка: скрываем или делаем неактивной, если это первое фото */}
             <button
-                className="lightbox__nav lightbox__nav--prev"
-                onClick={(e) => { e.stopPropagation(); onPrev(); }}
+                className={`lightbox__nav lightbox__nav--prev ${isFirst ? 'lightbox__nav--disabled' : ''}`}
+                onClick={(e) => { e.stopPropagation(); if (!isFirst) onPrev(); }}
+                disabled={isFirst}
                 aria-label="Previous image"
             >
                 <ChevronLeft size={48} />
@@ -49,9 +54,11 @@ export default function Lightbox({ images, currentIndex, onClose, onNext, onPrev
                 </div>
             </div>
 
+            {/* Правая стрелка: скрываем или делаем неактивной, если это последнее фото */}
             <button
-                className="lightbox__nav lightbox__nav--next"
-                onClick={(e) => { e.stopPropagation(); onNext(); }}
+                className={`lightbox__nav lightbox__nav--next ${isLast ? 'lightbox__nav--disabled' : ''}`}
+                onClick={(e) => { e.stopPropagation(); if (!isLast) onNext(); }}
+                disabled={isLast}
                 aria-label="Next image"
             >
                 <ChevronRight size={48} />
