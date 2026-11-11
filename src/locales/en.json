@@ -69,6 +69,18 @@
         "Form integration with Telegram bot",
         "Fully responsive on all devices"
       ]
+    },
+    "technoservice": {
+      "title": "OrgTechService — Mariupol",
+      "description": "Landing page for an office equipment repair and cartridge refilling service center.",
+      "longDescription": "A modern landing page with form integration directly into a Telegram bot. Implemented a strict tech design, responsive layout, dropdown menus, and convenient form validation.",
+      "features": [
+        "Form integration with Telegram Bot API",
+        "Responsive design for all devices",
+        "Fast loading and optimization",
+        "Interactive animations",
+        "Clear service and pricing structure"
+      ]
     }
   }
 }
