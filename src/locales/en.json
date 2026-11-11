@@ -81,6 +81,17 @@
         "Interactive animations",
         "Clear service and pricing structure"
       ]
+    },
+    "study-projects": {
+      "title": "Study Projects",
+      "description": "A collection of works created during my web development studies: from simple games to landing pages.",
+      "longDescription": "A collection of projects demonstrating my journey in Frontend development. Includes vanilla JS (games, todo-list), responsive layout (coffee shop, furniture catalog), and first steps in React.",
+      "features": [
+        "Vanilla JavaScript: games, logic, DOM",
+        "Responsive layout with Flexbox/Grid",
+        "Forms and validation",
+        "First React projects"
+      ]
     }
   }
 }

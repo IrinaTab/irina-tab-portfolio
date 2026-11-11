@@ -10,6 +10,22 @@ import technoMobile from '@/assets/techno-mobile.jpg'
 import technoModal from '@/assets/techno-modal.jpg'
 import technoServices from '@/assets/techno-services.jpg'
 import technoReviews from '@/assets/techno-reviews.jpg'
+// Импорты для Учебных проектов (все 16 штук)
+import studyProjects from '@/assets/study-projects.jpg' // Коллаж (главная)
+import studySilentHill from '@/assets/silent-hill.jpg'
+import studyChat from '@/assets/online-chat.jpg'
+import studyTodo from '@/assets/todo-list.jpg'
+import studyTodoMob from '@/assets/todo-list-mob.jpg'
+import studyCoffi from '@/assets/coffi.jpg'
+import studyCoffiMenu from '@/assets/coffi-menu.jpg'
+import studyCoffiMob from '@/assets/coffi-mob.jpg'
+import studyGames from '@/assets/games.jpg'
+import studyGamesAbout from '@/assets/games-about.jpg'
+import studyGamesAbout1 from '@/assets/games-about-1.jpg'
+import studyFurniture from '@/assets/furniture.jpg'
+import studyFurnitureFooter from '@/assets/furniture-footer.jpg'
+import studyFurnitureCatalog from '@/assets/furniture-catalog.jpg'
+import studyFurnitureCart from '@/assets/furniture-cart.jpg'
 
 export interface ProjectItem {
   id: string
@@ -48,6 +64,28 @@ export const projects: ProjectItem[] = [
     ],
     liveLink: 'https://technoservice-landing-git-main-irina-tab.vercel.app/',
     videoUrl: '/videos/techno-review.mp4',
+    role: 'Frontend Developer'
+  },
+  {
+    id: 'study-projects',
+    stack: ['HTML', 'CSS', 'JavaScript', 'React', 'Vite'],
+    images: [
+      studyProjects,
+      studyGames,
+      studyGamesAbout,
+      studyGamesAbout1,
+      studyCoffi,
+      studyCoffiMenu,
+      studyCoffiMob,
+      studyTodo,
+      studyTodoMob,
+      studyFurniture,
+      studyFurnitureCatalog,
+      studyFurnitureCart,
+      studyFurnitureFooter,
+      studyChat,
+      studySilentHill
+    ],
     role: 'Frontend Developer'
   },
 ]
