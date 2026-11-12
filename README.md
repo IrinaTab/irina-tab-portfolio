@@ -1,32 +1,83 @@
-# React + TypeScript + Vite
+# Портфолио Frontend-разработчика — Ирина Табия
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Современный, быстрый и полностью адаптивный сайт-портфолио, созданный для демонстрации проектов и навыков веб-разработки.
 
-Currently, two official plugins are available:
+🌐 **Живой сайт:** [irina-tab-portfolio.vercel.app](https://irina-tab-portfolio-k8d9-one.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Особенности проекта
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Адаптивный дизайн:** Идеально выглядит на смартфонах, планшетах и мониторах (Mobile-First).
+*   **Мультиязычность (i18n):** Поддержка русского (RU) и английского (EN) языков с мгновенным переключением.
+*   **Кастомная галерея:** Лайтбокс для просмотра скриншотов проектов с плавными анимациями.
+*   **Видео-обзоры:** Встроенный плеер для просмотра видео-презентаций работ.
+*   **Интеграция с Telegram:** Формы обратной связи отправляют заявки напрямую в Telegram-бот.
+*   **Плавный скролл:** Удобная навигация по якорям и кнопка «Наверх».
+*   **Премиальный дизайн:** Минимализм в черно-бежевых тонах с кастомной типографикой.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🚀 Технологический стек
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+**Основное:**
+*   [React 18](https://react.dev/) — библиотека для создания пользовательских интерфейсов
+*   [TypeScript](https://www.typescriptlang.org/) — строгая типизация для надежного кода
+*   [Vite](https://vitejs.dev/) — сверхбыстрый сборщик
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+**Стили и UI:**
+*   CSS Modules / Чистый CSS с переменными
+*   [Lucide React](https://lucide.dev/) — минималистичные иконки
+
+**Дополнительно:**
+*   [i18next](https://www.i18next.com/) + `react-i18next` — локализация контента
+*   [React Router](https://reactrouter.com/) — навигация
+*   Telegram Bot API — отправка заявок
+
+---
+
+## 📦 Установка и запуск
+
+1.  **Клонируйте репозиторий:**
+    ```bash
+        git clone https://github.com/IrinaTab/irina-tab-portfolio.git
+    ```
+2.  **Перейдите в папку проекта:**
+    ```bash
+        cd irina-tab-portfolio
+    ```
+3.  **Установите зависимости:**
+    ```bash
+        npm install
+    ```
+4.  **Запустите сервер для разработки:**
+    ```bash
+        npm run dev
+    ```
+*Сайт будет доступен по адресу: http://localhost:5173*
+
+5.  **Сборка для продакшена:**
+    ```bash
+        npm run build
+    ```
+## 📂 Структура проекта
+        src/
+        ├── assets/          # Картинки, видео, шрифты
+        ├── components/      # Переиспользуемые UI-компоненты (Button, Lightbox, VideoModal и т.д.)
+        ├── data/            # Статические данные (массив проектов)
+        ├── locales/         # Файлы переводов (ru.json, en.json) и настройка i18n
+        ├── sections/        # Крупные блоки страниц (Hero, About, Skills, Projects, Contacts)
+        ├── styles/          # Глобальные стили и CSS-переменные (variables.css)
+        ├── types/           # TypeScript-интерфейсы
+        ├── App.tsx          # Главный компонент и роутинг
+        └── main.tsx         # Точка входа
+
+## 👩‍💻 Автор
+
+*   Telegram: @IrinaTabVeb
+
+*   Email: irisha.tab@mail.ru
+
+*   Портфолио: Ссылка на сайт
+
+***Сделано с ❤️ и чистым кодом.***
