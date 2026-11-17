@@ -164,10 +164,15 @@
   margin-bottom: 6px;
 }
 
+.about__card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .about__card-description {
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-muted);
   margin: 0;
 }
-

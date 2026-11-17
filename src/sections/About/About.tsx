@@ -1,6 +1,10 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { GraduationCap, Briefcase } from 'lucide-react'
 import Container from '@/components/Container'
+import CertificateButton from '@/components/CertificateButton'
+import Lightbox from '@/components/Lightbox'
+import skyproCert from '@/assets/skypro.jpg'
 import './About.css'
 
 interface EducationItem {
@@ -18,6 +22,7 @@ interface ExperienceItem {
 
 export default function About() {
   const { t } = useTranslation()
+  const [isCertOpen, setIsCertOpen] = useState(false)
 
   const educationList = t('about.education', {
     returnObjects: true,
@@ -35,7 +40,7 @@ export default function About() {
         </div>
 
         <div className="about__grid">
-          {/* Education Block */}
+          {/* Блок Образования */}
           <div className="about__column">
             <div className="about__column-header">
               <span className="about__column-icon">
@@ -51,7 +56,13 @@ export default function About() {
                     <span className="about__timeline-dot" aria-hidden="true" />
                     <div className="about__card">
                       <div className="about__card-header">
-                        <span className="about__card-institution">{item.institution}</span>
+                        {/* Обертка для названия и кнопки */}
+                        <div className="about__card-title-row">
+                          <span className="about__card-institution">{item.institution}</span>
+                          {item.institution === 'Skypro' && (
+                            <CertificateButton onClick={() => setIsCertOpen(true)} />
+                          )}
+                        </div>
                         <span className="about__card-period">{item.period}</span>
                       </div>
                       <div className="about__card-title">{item.specialty}</div>
@@ -62,7 +73,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Experience Block */}
+          {/* Блок Опыта */}
           <div className="about__column">
             <div className="about__column-header">
               <span className="about__column-icon">
@@ -89,7 +100,17 @@ export default function About() {
           </div>
         </div>
       </Container>
+
+      {/* Лайтбокс для сертификата */}
+      {isCertOpen && (
+        <Lightbox
+          images={[skyproCert]}
+          currentIndex={0}
+          onClose={() => setIsCertOpen(false)}
+          onNext={() => { }}
+          onPrev={() => { }}
+        />
+      )}
     </section>
   )
 }
-
