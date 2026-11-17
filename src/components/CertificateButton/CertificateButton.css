@@ -9,45 +9,51 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease;
     margin-left: 8px;
-    /* Отступ от текста Skypro */
+    padding: 0;
 
-    /* Начальная анимация свечения */
-    box-shadow: 0 0 0 0 rgba(229, 195, 166, 0.7);
-    animation: pulse-glow 2s infinite;
+    /* Убрали transform: scale из анимации, оставили только тень */
+    animation: btn-pulse 2s infinite alternate;
 }
 
 .cert-btn__icon {
     width: 18px;
     height: 18px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Иконка абсолютно статична в обычном состоянии */
 }
 
-/* Эффект при наведении */
+/* Эффекты при наведении (вращение только для иконки) */
+.cert-btn:hover .cert-btn__icon {
+    animation: spin 1s ease-in-out;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.9));
+}
+
 .cert-btn:hover {
-    background-color: var(--text-main);
-    color: var(--accent);
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 0 15px 5px rgba(229, 195, 166, 0.4);
     animation: none;
-    /* Отключаем пульсацию при наведении, чтобы не мешала */
+    /* Останавливаем пульсацию при наведении */
+    background-color: var(--text-main);
+    color: #ffffff;
 }
 
-/* Анимация пульсации (мерцания) */
-@keyframes pulse-glow {
-    0% {
-        box-shadow: 0 0 0 0 rgba(229, 195, 166, 0.7);
-        transform: scale(1);
+/* Анимация вращения иконки */
+@keyframes spin {
+    from {
+        transform: rotate(0deg) scale(1);
     }
 
-    50% {
-        box-shadow: 0 0 10px 4px rgba(229, 195, 166, 0.3);
-        transform: scale(1.05);
+    to {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+/* Анимация пульсации ТОЛЬКО для тени (без изменения размера кнопки) */
+@keyframes btn-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(229, 195, 166, 0.6);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(229, 195, 166, 0);
-        transform: scale(1);
+        box-shadow: 0 0 15px 6px rgba(229, 195, 166, 0.2);
     }
 }
